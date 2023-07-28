@@ -6,38 +6,84 @@
 	<title>CMS-GoodShop</title>
 </head>
 <body>
-	<table border>
-		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Наименование</th>
-				<th>Категория</th>
-				<th>ед/изм</th>
-				<th>количество</th>
-				<th>цена</th>
-				<th>ИТОГ</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>24601654816512</td>
-				<td>Навигационная система Soundmax</td>
-				<td>Техника для дома</td>
-				<td>шт</td>
-				<td>5</td>
-				<td>$100</td>
-				<td>$500</td>
-			</tr>
-			<tr>
-				<td>24601654816512</td>
-				<td>Телевизор DEXP</td>
-				<td>Техника для дома</td>
-				<td>шт</td>
-				<td>15</td>
-				<td>$1000</td>
-				<td>$15000</td>
-			</tr>
-		</tbody>
-	</table>
+	<div>
+		<table border>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Наименование</th>
+					<th>Категория</th>
+					<th>ед/изм</th>
+					<th>количество</th>
+					<th>цена</th>
+					<th>ИТОГ</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>24601654816512</td>
+					<td>Навигационная система Soundmax</td>
+					<td>Техника для дома</td>
+					<td>шт</td>
+					<td>5</td>
+					<td>$100</td>
+					<td>$500</td>
+				</tr>
+				<tr>
+					<td>24601654816512</td>
+					<td>Телевизор DEXP</td>
+					<td>Техника для дома</td>
+					<td>шт</td>
+					<td>15</td>
+					<td>$1000</td>
+					<td>$15000</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<h2>Добавить товар</h2>
+		<form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+			<fieldset>
+				<label for="">Наименование<br>
+					<input type="text" name="name">
+				</label>
+				<br>
+				<label for="">Категория<br>
+					<input type="text" name="category">
+				</label>
+				<br>
+				<label for="">Еденицы измерения<br>
+					<input type="text" name="units">
+				</label>
+				<br>
+				<label for="">Дисконт<br>
+					<input type="checkbox" name="discont">
+					<input type="text" disabled>
+				</label>
+				<br>
+				<label for="">Описание<br>
+					<textarea cols="16" rows="2" name="description"></textarea>
+				</label>
+				<br>
+				<label for="">Количество<br>
+					<input type="number" name="count">
+				</label>
+				<br>
+				<label for="">Цена<br>
+					<input type="number" name="price">
+				</label>
+				<br>
+				<br>
+				<label for="">
+					<input type="file" name="image">
+				</label>
+				<br>
+			</fieldset>
+			<br>
+			<br>
+			<input type="submit" value="Добавить товар">
+		</form>
+	</div>
 </body>
 </html>
